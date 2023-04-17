@@ -85,7 +85,7 @@ Loop on order
         Robot order image screenshot    ${order}[Order number]
         Wait Until Keyword Succeeds    2x    0.5s    Go to next order
         Close the annoying modal
-        BREAK
+        #BREAK
     END
 
 Select head type number
