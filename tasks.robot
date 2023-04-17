@@ -85,7 +85,7 @@ Loop on order
         Robot order image screenshot    ${order}[Order number]
         Wait Until Keyword Succeeds    2x    0.5s    Go to next order
         Close the annoying modal
-        BREAK
+        #BREAK
     END
 
 Select head type number
@@ -132,7 +132,6 @@ Robot order receipt on pdf
     [Arguments]    ${order id}
     ${receipt_pdf_content}=    Get Element Attribute    ${RECEIPT BOX ELEMENT}    outerHTML
     Html To Pdf    ${receipt_pdf_content}    ${OUTPUT RECEIPT FOLDER}${/}receipt_order_num_${order id}.pdf
-    #Log    ${receipt_pdf_content}
 
 Robot order image screenshot
     [Arguments]    ${order id}
